@@ -1,0 +1,68 @@
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6402B6D6-D775-48A5-8C64-827723EA9666}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SitefinityWebApp</RootNamespace>
+    <AssemblyName>SitefinityPar.Extensions</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.3" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.3" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.WebHost" Version="5.2.3" />
+    <PackageReference Include="Progress.Sitefinity.AgenticRAGConnector" Version="15.4.8641" />
+    <PackageReference Include="System.Memory" Version="4.6.3" />
+    <PackageReference Include="System.Text.Json" Version="10.0.12" />
+    <PackageReference Include="Telerik.Sitefinity.Core" Version="15.4.8641" />
+    <PackageReference Include="WebActivatorEx" Version="2.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\CustomChatStartup.cs" />
+    <Compile Include="Services\Chat\Clients\AgenticRagHttpClient.cs" />
+    <Compile Include="Services\Chat\Serialization\ChatJson.cs" />
+    <Compile Include="Services\Chat\Models\KnowledgeBoxDetails.cs" />
+    <Compile Include="Services\Chat\Serialization\OptionalBooleanConverter.cs" />
+    <Compile Include="Services\Chat\Serialization\OptionalObjectConverter.cs" />
+    <Compile Include="Services\Chat\Serialization\OptionalObjectListConverter.cs" />
+    <Compile Include="Services\Chat\Serialization\OptionalStringConverter.cs" />
+    <Compile Include="Services\Chat\Models\PredictionChunk.cs" />
+    <Compile Include="Services\Chat\Serialization\PredictionRequestBuilder.cs" />
+    <Compile Include="Services\Chat\Serialization\PredictionResponseParser.cs" />
+    <Compile Include="Services\Chat\PredictionService.cs" />
+    <Compile Include="Services\Chat\Models\RoutingRule.cs" />
+    <Compile Include="Services\Chat\Models\SearchConfiguration.cs" />
+    <Compile Include="Services\Chat\Serialization\SearchConfigurationParser.cs" />
+    <Compile Include="Services\Chat\SearchConfigurationService.cs" />
+    <Compile Include="Services\Controllers\CustomChatController.cs" />
+    <None Include="nuget.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

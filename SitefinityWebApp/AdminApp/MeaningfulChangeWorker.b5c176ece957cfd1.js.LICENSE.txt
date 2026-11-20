@@ -1,0 +1,17 @@
+/*! ./hashing */
+
+/*! ./text-significant-change.decider */
+
+/*! ./utils/hashed-ngram-vectorizer */
+
+/*! ./utils/levenshtein-distance */
+
+/*! ./utils/numbers-fingerprint */
+
+/*! ./utils/text-normalization */
+
+/*! ./utils/vector-similarity */
+
+/*!**********************************************************************************!*\
+  !*** ./src/app/modules/html/meaningful-change/text-significant-change.worker.ts ***!
+  \**********************************************************************************/

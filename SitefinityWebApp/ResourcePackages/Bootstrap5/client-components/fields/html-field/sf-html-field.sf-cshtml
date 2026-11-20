@@ -1,0 +1,49 @@
+﻿<textarea id="editor" style="height: 340px;"
+    kendo-editor="editorWidget" ng-model="sfModel"
+    k-scope-field="editorWidget"
+    sf-toggle-commands="strikethrough, align-left, align-center, align-right, align-justify, subscript, supscript, fontName, fontSize, foreground-color, droplet, print"
+    k-encoded="false"
+    k-stylesheets='["{{htmlFieldCssUrl}}"]',
+    k-paste-cleanup="{
+        all: false,
+        css: false,
+        keepNewLines: false,
+        msAllFormatting: true,
+        msConvertLists: true,
+        msTags: true,
+        none: false,
+        span: true
+   	}",
+    k-tools='[
+    "formatting",
+    "bold", "italic", "underline",
+    "justifyLeft", "justifyCenter", "justifyRight", "justifyFull",
+    "insertUnorderedList", "insertOrderedList", "indent", "outdent", "subscript", "superscript",
+    "createLink", "unlink", "insertImage", "insertFile", "insertVideo",
+    "createTable", "addColumnLeft", "addColumnRight", "addRowAbove", "addRowBelow", "deleteRow", "deleteColumn",
+    "cleanFormatting",
+    "strikethrough", "fontName", "fontSize", "foreColor", "backColor", "print",
+    {
+        name: "showAll",
+        template: "<a class=\"k-toolbar-tool custom-tool show-all-button\" title=\"@(Res.Get<ClientComponentsResources>().AllTools)\"><span class=\"glyphicon glyphicon-option-horizontal\"></span></a>"
+    },
+    {
+        name: "fullscreen",
+        type: "button",
+        attributes: { "class": "k-tool js-custom-tool custom-tool toggle-full-screen", "title": "@(Res.Get<ClientComponentsResources>().Fullscreen)" }
+    },
+    {
+        name: "htmlView",
+        template: "<button class=\"custom-tool btn btn-default btn-xs pull-right js-htmlview js-custom-tool\">HTML</button>"
+    }
+    ]'>
+</textarea>
+
+<sf-link-selector-modal class="linkSelectorModal"></sf-link-selector-modal>
+
+<div class="mediaPropertiesModal"
+     modal
+     size="normal"
+     existing-scope="true"
+     window-class="sf-designer-dlg sf-timespan-selector-dlg sf-backend-wrp">
+</div>

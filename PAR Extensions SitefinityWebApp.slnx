@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="SitefinityPar.Extensions/SitefinityPar.Extensions.csproj" Id="6402b6d6-d775-48a5-8c64-827723ea9666" />
+  <Project Path="SitefinityWebApp/SitefinityWebApp.csproj" Id="1419c8db-fe91-464f-8955-c7c3b3b766e9" />
+</Solution>

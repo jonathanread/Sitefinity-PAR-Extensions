@@ -1,0 +1,21 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output and restored dependencies
+**/bin/
+**/obj/
+**/packages/
+
+# Local Sitefinity runtime state and sensitive environment files
+SitefinityWebApp/session-state/
+SitefinityWebApp/App_Data/Sitefinity.mdf
+SitefinityWebApp/App_Data/Sitefinity_log.ldf
+SitefinityWebApp/App_Data/appStatusReport.html
+SitefinityWebApp/App_Data/Sitefinity/Sitefinity.lic
+SitefinityWebApp/App_Data/Sitefinity/Configuration/
+SitefinityWebApp/App_Data/Sitefinity/Logs/
+SitefinityWebApp/App_Data/GeoLocation/GeoLite2-City.mmdb
